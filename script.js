@@ -26,4 +26,12 @@ let weather = {
     document.querySelector(".wind").innerText =
       "Wind Speed : " + speed + "km/h";
   },
+  searchWeather: function () {
+    this.fetchWeather(document.querySelector(".search-bar").value);
+  },
 };
+
+//event listener for search button
+document.querySelector(".search button").addEventListener("click", function () {
+  weather.searchWeather();
+});
